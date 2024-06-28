@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # ESLint configuration
-.eslintrc.js
+.eslintrc.cjs
 
 # Vite configuration
 vite.config.js
