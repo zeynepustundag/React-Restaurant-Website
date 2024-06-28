@@ -11,13 +11,19 @@ import Contact from "./pages/Contact"
 
 import "./App.css"
 
+import { useState } from "react";
+
 function App() {
 
+  const [isSideBarClicked, setIsSideBarClicked] = useState(false);
 
+  const SideBarClickedHandler = () => {
+    setIsSideBarClicked(!isSideBarClicked)
+  }
   return (
-    <>
+    <div className={isSideBarClicked ? "sidebar-open" : ""} >
       <BrowserRouter>
-        <Header></Header>
+        <Header SideBarClickedHandler={SideBarClickedHandler} isSideBarClicked={isSideBarClicked}></Header>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/menu" element={<Menu></Menu>}></Route>
@@ -27,7 +33,7 @@ function App() {
         <Footer></Footer>
       </BrowserRouter>
 
-    </>
+    </div>
   )
 }
 

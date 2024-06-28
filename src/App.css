@@ -57,7 +57,77 @@ body {
     border: 0.1rem solid;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    background-color: var(--main-color);
+    border: none;
+}
+
 /*header end*/
+
+/*sidebar start*/
+
+.sidebardiv {
+    position: absolute;
+    width: 28rem;
+    height: 100vh;
+    background-color: var(--main-color);
+    z-index: 5;
+    right: 0;
+    top: 0;
+    display: none;
+    border-left: 2px solid;
+}
+
+.close-icon {
+    font-size: 5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    bottom: 1rem;
+}
+
+.close-icon:hover {
+    color: white;
+    /*    border: 1px solid;
+    border-color: black;
+    border-radius: 4px; */
+    cursor: pointer;
+}
+
+.sidebar-items {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.sidebar-item {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: var(--main-color);
+    /*    border-bottom: 1px solid;
+    border: 75%; */
+    cursor: pointer;
+    width: 28rem;
+    border-bottom: 1px solid;
+    text-align: left;
+    padding-left: 0.8rem;
+}
+
+.sidebar-item:hover {
+    color: white;
+    border-color: black;
+    text-shadow: 0 0 4px black;
+}
+
+/*sidebar end*/
+
 
 /*footer start*/
 .footerdiv {
@@ -90,6 +160,7 @@ body {
 .footerdiv .socialmedia-icons .icons-item:hover {
     color: black;
 }
+
 /*footer end*/
 
 /*home start*/
@@ -150,6 +221,7 @@ body {
         height: 50vh;
     }
 }
+
 /*home end*/
 
 /*menu start*/
@@ -237,6 +309,7 @@ h4 {
         height: 12rem;
     }
 }
+
 /*menu end*/
 
 /*about start*/
@@ -309,6 +382,7 @@ ul {
     top: 10rem;
     z-index: 1;
 }
+
 /*about end*/
 
 /*contact start*/
@@ -434,6 +508,18 @@ hr {
     }
 }
 
+@media (max-width:600px) {
+    :root {
+        font-size: 6px;
+    }
+}
+
+@media (max-width:400px) {
+    :root {
+        font-size: 4px;
+    }
+}
+
 @media(max-width:1024px) {
     .about-img-container {
         display: flex;
@@ -445,4 +531,27 @@ hr {
         position: static;
     }
 }
+
 /*contact end*/
+
+/*responsive*/
+
+@media(max-width:768px) {
+    .links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebardiv {
+        display: block;
+    }
+
+    .sidebar-open {
+        margin-right: 28rem;
+        /* opacity: 0.4; */
+    }
+
+}
